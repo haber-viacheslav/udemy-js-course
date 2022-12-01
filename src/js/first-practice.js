@@ -55,24 +55,68 @@
 
 // -1-
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 
-console.log(numberOfFilms);
+// console.log(numberOfFilms);
 
-// -2-
+// // -2-
 
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false,
-};
+// const personalMovieDB = {
+//   count: numberOfFilms,
+//   movies: {},
+//   actors: {},
+//   genres: [],
+//   privat: false,
+// };
 
-for (let i = 0; i < 2; i += 1) {
-  const oneOfLastMovie = prompt('Один из последних просмотренных фильмов?');
-  const movieRate = prompt('На сколько оцените его?');
-  personalMovieDB.movies[oneOfLastMovie] = movieRate;
+// for (let i = 0; i < 2; i += 1) {
+//   const oneOfLastMovie = prompt('Один из последних просмотренных фильмов?');
+//   const movieRate = prompt('На сколько оцените его?');
+//   personalMovieDB.movies[oneOfLastMovie] = movieRate;
+// }
+
+// console.log(personalMovieDB);
+
+// let i = 50;
+
+// while (i < 60) {
+//   console.log(i);
+//   i += 1;
+// }
+
+// do {
+//   console.log(i);
+//   i += 1;
+// } while (i < 60);
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i);
+// }
+
+// let result = '';
+// const lengthStars = 7;
+
+// for (let i = 1; i < lengthStars; i += 1) {
+//   for (let j = 0; j < i; j += 1) {
+//     result += '*';
+//   }
+//   result += '\n';
+// }
+// console.log(result);
+
+let result = '';
+const lengthStars = 7;
+
+first: for (let i = 1; i < lengthStars; i += 1) {
+  console.log(`First level ${i}`);
+
+  for (let j = 0; j < i; j += 1) {
+    console.log(`Second level ${j}`);
+    for (let k = 0; k < j; k += 1) {
+      if (k === 2) {
+        break first;
+      }
+      console.log(`Third level ${k}`);
+    }
+  }
 }
-
-console.log(personalMovieDB);
